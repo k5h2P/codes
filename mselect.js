@@ -12,8 +12,8 @@ var $ = function(s, v) {
       else return false;
     },
     rand: function(a, b) {
-      if(_.undef(b) && !_.undef(a)) return Math.floor(Math.random() * (a + 1));
-      else if (_.undef(a) && _.undef(b)) return Math.round(Math.random());
+      if(this.undef(b) && !this.undef(a)) return Math.floor(Math.random() * (a + 1));
+      else if (this.undef(a) && this.undef(b)) return Math.round(Math.random());
       else {
         a = Math.ceil(a);
         b = Math.floor(b);
@@ -21,9 +21,9 @@ var $ = function(s, v) {
       }
     },
     text: function(v, s) {
-      if (_.undef(s)) s = '';
-      if (_.undef(v) && _.undef(s)) v = '';
-      if (_.undef(s) && typeof v == 'string' || 'number') document.body.innerHTML = v;
+      if (this.undef(s)) s = '';
+      if (this.undef(v) && this.undef(s)) v = '';
+      if (this.undef(s) && typeof v == 'string' || 'number') document.body.innerHTML = v;
       else v.innerHTML = s;
     },
     rgb(r, g, b) {
