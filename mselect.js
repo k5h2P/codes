@@ -28,7 +28,7 @@ var $ = function(s, v) {
       return 'rgb(' + r + ',' + g + ',' + b + ')';
     },
     load: function(f) {
-      return window.addEventListener(f);
+      return window.addEventListener('load',f);
     },
     tidy: function() {
       document.body.style.margin = 0;
