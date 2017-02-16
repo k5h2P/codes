@@ -21,12 +21,21 @@ var $ = function(s, v) {
       }
     },
     text: function(v, s) {
-      if (this.undef(s)) s = '';
-      if (this.undef(v) && this.undef(s)) v = '';
-      if (this.undef(s) && typeof v == 'string' || 'number') document.body.innerHTML = v;
+      if (this.undef(s)) document.body.innerHTML = v;
       else v.innerHTML = s;
     },
-    rgb(r, g, b) {
+    rgb: function(r, g, b) {
       return 'rgb(' + r + ',' + g + ',' + b + ')';
+    },
+    load: function(f) {
+      return window.addEventListener(f);
+    },
+    tidy: function() {
+      document.body.style.margin = 0;
+      document.body.style.overflow = 'hidden';
+    },
+    paint: function(v,s) {
+      if(s === undefined) document.body.style.background = v;
+      else v.style.background = s;
     }
   };
