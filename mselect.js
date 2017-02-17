@@ -27,7 +27,7 @@ var $ = function(s, v) {
     rgb: function(r, g, b) {
       return 'rgb(' + r + ',' + g + ',' + b + ')';
     },
-    load: function(f) {
+    ready: function(f) {
       return window.addEventListener('load',f);
     },
     tidy: function() {
